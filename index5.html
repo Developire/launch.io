@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Live Stream Page</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+    }
+    
+    #video-background {
+      position: fixed;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      overflow: hidden;
+    }
+    
+    video {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+    
+    .container {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+    }
+    
+    .golive-button {
+      background-color: green;
+      color: white;
+      padding: 15px 30px;
+      font-size: 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div id="video-background">
+    <video autoplay loop muted id="backgroundVideo">
+      <source src="video2.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+  
+
+  <script>
+    // Get the video element
+    var video = document.getElementById('backgroundVideo');
+    
+    // Wait for 10 seconds before redirecting
+    setTimeout(function() {
+      // Redirect to the specified link after 10 seconds
+      window.location.href = "https://nventelectric.cpq.cloud.sap/Login.aspx?nextUrl=default.aspx";
+    }, 10000); // 10 seconds = 10000 milliseconds
+  </script>
+</body>
+</html>
